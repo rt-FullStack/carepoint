@@ -1,0 +1,389 @@
+
+/* Grundläggande stil börjar här*/
+body {
+  font-family: Arial, sans-serif;
+  
+}
+h1{font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif}
+h2{font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif}
+h3{font-family: 'Architects Daughter', cursive;}
+h4{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+h5{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+p{font-family: 'Roboto', sans-serif;}
+* {
+  box-sizing: border-box; /* Gör att padding och border räknas med i elementets bredd och höjd */
+}
+
+.row::after {/* Gör att det blir en ren rad */
+  content:"";/* Skapar ett tomt element */
+  clear: both;/* Rensa float */
+  display: table;/* Gör att elementet blir en tabell */
+}
+
+[class*="col-"] { /* Gör att kolumnerna är flytande */
+  float: left; 
+  padding: 0;
+} 
+/* Grundläggande stil slutar här*/
+
+
+/* header börja här */
+.header {
+  color: #000000;
+  text-align: center; 
+  font-size: 20px;
+  width: 100%;
+  padding: 0;
+  h1 h5 {
+    margin: 0;
+    
+  }
+}
+  
+/* Knappens grundstil */
+.animated-button {
+  background: linear-gradient(to right, #e3d5d8, #ff4b2b); /* Gradient background */
+  border: none;
+  color: white;
+  padding: 20px 100px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s ease; /* Lägg till en övergångseffekt */
+  position: relative; /* Lägg till positionering */ 
+  overflow: hidden; /* Gör att innehållet inte ryms utanför knappen */
+  box-shadow: 0 4px 15px rgba(255, 65, 108, 0.3);
+}
+
+/* Effekt vid hovring */
+.animated-button:hover {
+  background: linear-gradient(to right, #e2fd6a, #463af5);/* Gradient background */
+  transform: scale(1.1); /* Förstora storleken när knappen hovras */
+  box-shadow: 0 8px 20px rgba(255, 242, 3, 0.6);
+}
+
+/* Klick-effekt */
+.animated-button:active {
+  transform: scale(0.95); /* Förminska storleken när knappen trycks ner */
+}
+
+/* Animerad pulserande effekt */
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px rgba(0, 13, 16, 0.3); } /* Starta med en ljusare box-shadow */
+  50% { box-shadow: 0 0 20px rgba(251, 0, 0, 0.6); } /* Mitten av effekten */
+  100% { box-shadow: 0 0 10px rgba(199, 248, 2, 0.91); }/* Slutar med en ljusare box-shadow */
+}
+
+.animated-button {
+  animation: pulse 3s infinite;
+}
+
+.header h1 a {
+  font-size: 50px;
+  font-weight: bold;
+  color: #470202;
+  text-decoration: none;
+
+}
+/* header slutar här */
+
+/* logo börja här */
+.logo {
+  height: 50px; /* Fixed height */
+  width: auto; /* Maintain aspect ratio */
+}
+/* logo slutar här */
+
+/* Navigation  börja här */
+nav {
+  color: #0b0000;
+  padding: 5px;
+  background-color: #f4f4f4;
+  gap: 2px;
+}
+nav ul {
+  list-style-type: none;/* Ta bort punkter från listan */
+  padding: 3px;
+  margin: 0;
+  display: flex;/* Gör att listan blir en rad */
+  gap: 15px;
+  justify-content: center;
+}
+nav ul li a { 
+  color: #120101;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #120101;
+  font-weight: bold;
+  
+}
+
+/* Navigation  slutar här */
+
+
+/* dropdown-menu börja här */
+
+#main-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  
+  justify-content: center;/* Gör att listan blir en rad */
+}
+#main-menu li {
+  position: relative;
+  padding: 0;
+  color: white;
+  cursor: pointer;
+}
+  #main-menu li a {
+    display: block;
+    padding: 10px;
+    color: rgb(14, 0, 0);
+    text-decoration: none;
+}
+#main-menu li:hover {
+  background: #cdcecd;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #eeeded;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  min-width: 150px;
+}
+.dropdown li {
+  padding: 10px;
+  color: white;
+  cursor: pointer;/* Ändra cursor till pekande hand */
+}
+.dropdown li:hover {
+  background: #d5d5d5;
+}
+
+/* dropdown-menu slutar här */
+
+/* news och section börja här */
+.newspaper {
+column-count: 3;
+column-gap: 40px;
+column-rule-style: solid;/* Gör att det blir en linje mellan kolumnerna */
+
+  }
+
+  /* news och section slutar här */
+
+  /* menu börja här */
+  
+  .menu ul a {
+    text-decoration: none;
+    color: #0f0f0f;
+    font-weight: bold;
+
+  }
+
+  .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  
+  }
+  
+  .menu li {
+    font-size: 15px;
+    
+    padding: 5px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    color: #0f0f0f;
+    
+   /*  background-color: #f4f4f4;  */
+    font-family: 'roboto', sans-serif;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.10), 1px 1px 1px 1px rgba(0,0,0,0.02); 
+  } 
+  
+  .menu li:hover {
+    background-color: #cbccda;
+  }  
+  /* menu slutar här */
+
+  /* aside börja här */
+  .aside {
+    background-color: #fbfbfb;
+    padding: 16px;
+    color: #0f0f0f;
+    text-align: left;
+    font-size: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+  /* aside slutar här */
+
+  /* footer börja här */
+  .footer {
+    background-color: #e3f4fa;
+    color: #0d0000;
+    text-align: right;
+    font-size: 12px;
+    padding: 1px;
+    margin: auto;
+  }
+  /* footer slutar här */
+  
+  
+
+  /* Responsive layout - börja här */
+
+
+
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 80%;
+    margin-top: 10px;
+    padding: 15px;
+  }
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  @media only screen and (min-width: 868px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+ /* Responsive layout - sluter här */
+  
+ 
+
+  /* Picture Gallery börja här */
+  
+.gallery {
+  margin-top: 50px;
+}
+
+#folderBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  
+}
+
+.thumbnails {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: last baseline;
+}
+
+.thumbnail {
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.thumbnail img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  margin: 10% auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+}
+/* Picture Gallery slutar här */
+
+
+/* Kontakt Formulär börja här */  
+
+.form-container {
+  background: #d0dcdb;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+.form-container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #4949bb;
+  border-radius: 5px;
+}
+form button {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #555;
+}
+/* Kontakt Formulär slutar här */
+
